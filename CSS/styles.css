@@ -1,0 +1,110 @@
+*{
+    font-family: 'Open Sans';
+    text-align: left;
+    color:rgb(41, 41, 41);
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: linear-gradient(to left,white,  #d5d5d5, white);
+    size: 100%;
+}
+h1{
+    font-size: 60px;
+    font-weight: bolder;
+}
+h2{
+    position: relative;
+    font-size: 25px;
+    top:-10px;
+}
+h3{
+    position:absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 0;
+}
+p{
+    position:absolute;
+    top: 70px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: bolder;
+    opacity: 0;
+}
+.fa {
+    height: 20px;
+    width: 20px;
+    padding: 6px;
+    text-align: center;
+    transition: .5s;
+}
+.fa:hover{
+    background-color: firebrick;
+    border-radius: 25%;
+    color: white;
+}
+
+header{grid-area: header;}
+main{grid-area: main; }
+.NickCage{
+    grid-area: cage;
+    height: 100%;
+}
+footer{   
+    grid-area: footer;
+    position: relative;
+    bottom: -50px;
+}
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+        'header header'
+        'cage main'
+        'cage main'
+        'cage footer';
+    grid-gap: 20px;
+    padding: 50px;
+    justify-content: center;
+    
+}
+.grid-container > body {
+    padding: 20px 0;
+}
+.movie-container{
+    position: relative;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 230px 230px;
+    grid-auto-rows: 305px;
+    justify-content: center;
+}
+
+.movie1, .movie2, .movie3, .movie4, .movie5{
+    position: relative;
+    border-style: solid;
+    width: 225px;
+    height: 300px;
+    justify-self: start;
+    z-index: -1;
+}
+
+.overlay:hover {
+    position: relative;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right, rgba(255,255,255, 0.8) 0%, rgba(255,255,255, 0.5) 50%, transparent 50%);
+
+}
+.overlay:hover, .overlay:hover h3, .overlay:hover p{
+    opacity: 1;
+    transition: 1s;
+
+}
